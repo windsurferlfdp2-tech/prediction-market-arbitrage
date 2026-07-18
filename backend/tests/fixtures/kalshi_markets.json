@@ -1,0 +1,14 @@
+{
+  "markets": [
+    {
+      "ticker": "KXFEDCUT-26JUL",
+      "event_ticker": "fed-july-rate-cut",
+      "market_type": "binary",
+      "yes_sub_title": "Yes",
+      "no_sub_title": "No",
+      "status": "active",
+      "title": "Will the Fed cut rates at the July meeting?"
+    }
+  ],
+  "cursor": ""
+}

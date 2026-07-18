@@ -1,0 +1,12 @@
+{
+  "market": "pm-condition-fed-july",
+  "asset_id": "pm-fed-no",
+  "timestamp": "2099-07-17T00:00:00Z",
+  "hash": "0xpmno",
+  "bids": [{"price": "0.46", "size": "100"}],
+  "asks": [{"price": "0.53", "size": "100"}],
+  "min_order_size": "1",
+  "tick_size": "0.01",
+  "neg_risk": false,
+  "last_trade_price": "0.52"
+}

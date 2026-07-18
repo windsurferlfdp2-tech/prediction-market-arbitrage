@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "condition_id": "pm-condition-fed-july",
+      "question": "Will the Fed cut rates at the July meeting?",
+      "active": true,
+      "closed": false,
+      "enable_order_book": true,
+      "market_slug": "fed-july-rate-cut",
+      "tokens": [
+        {"token_id": "pm-fed-yes", "outcome": "Yes"},
+        {"token_id": "pm-fed-no", "outcome": "No"}
+      ]
+    }
+  ]
+}

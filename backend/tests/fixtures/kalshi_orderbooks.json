@@ -1,0 +1,11 @@
+{
+  "orderbooks": [
+    {
+      "ticker": "KXFEDCUT-26JUL",
+      "orderbook_fp": {
+        "yes_dollars": [["0.55", "80.00"], ["0.54", "30.00"]],
+        "no_dollars": [["0.48", "60.00"], ["0.47", "60.00"]]
+      }
+    }
+  ]
+}
