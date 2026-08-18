@@ -1,11 +1,14 @@
 {
   "name": "prediction-market-arb-frontend",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "lint": "eslint .",
+    "test": "npm run typecheck && npm run test:api-config",
+    "test:api-config": "node --test lib/apiConfig.test.mjs lib/modelRegistryView.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

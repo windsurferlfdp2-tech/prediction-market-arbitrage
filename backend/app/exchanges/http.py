@@ -5,7 +5,6 @@ from typing import Any
 import httpx
 import structlog
 
-
 log = structlog.get_logger()
 
 
@@ -15,9 +14,7 @@ class RetryingHttpClient:
         self.retries = retries
         self.backoff_seconds = backoff_seconds
 
-    async def get_json(
-        self, url: str, params: Mapping[str, Any] | None = None
-    ) -> dict[str, Any]:
+    async def get_json(self, url: str, params: Mapping[str, Any] | None = None) -> Any:
         last_error: Exception | None = None
         async with httpx.AsyncClient(timeout=self.timeout_seconds) as client:
             for attempt in range(self.retries + 1):
@@ -26,8 +23,6 @@ class RetryingHttpClient:
                     response.raise_for_status()
                     log.info("exchange_request_ok", url=url, attempt=attempt)
                     data = response.json()
-                    if not isinstance(data, dict):
-                        raise ValueError("expected JSON object")
                     return data
                 except Exception as exc:  # noqa: BLE001
                     last_error = exc

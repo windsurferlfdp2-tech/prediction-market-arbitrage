@@ -8,6 +8,24 @@
       "no_sub_title": "No",
       "status": "active",
       "title": "Will the Fed cut rates at the July meeting?"
+    },
+    {
+      "ticker": "KXMULTI-26JUL",
+      "event_ticker": "multi-outcome-example",
+      "market_type": "multivariate",
+      "yes_sub_title": "Yes",
+      "no_sub_title": "No",
+      "status": "active",
+      "title": "Non-binary fixture market"
+    },
+    {
+      "ticker": "KXPAUSED-26JUL",
+      "event_ticker": "paused-example",
+      "market_type": "binary",
+      "yes_sub_title": "Yes",
+      "no_sub_title": "No",
+      "status": "inactive",
+      "title": "Inactive fixture market"
     }
   ],
   "cursor": ""

@@ -103,7 +103,8 @@ label {
 }
 
 input,
-select {
+select,
+button {
   width: 100%;
   min-height: 36px;
   border: 1px solid var(--line);
@@ -111,6 +112,23 @@ select {
   padding: 7px 9px;
   background: #fff;
   color: var(--ink);
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.actionButton {
+  align-self: end;
+  background: var(--ink);
+  color: #fff;
 }
 
 .tableWrap {
@@ -154,6 +172,17 @@ th {
   color: var(--warn);
 }
 
+.warningPanel {
+  display: grid;
+  gap: 6px;
+  border: 1px solid #f79009;
+  border-radius: 8px;
+  background: #fffaeb;
+  color: var(--warn);
+  padding: 12px;
+  font-size: 13px;
+}
+
 .detail {
   display: grid;
   gap: 18px;
@@ -184,6 +213,85 @@ th {
   font-size: 18px;
 }
 
+.compact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.compact-list span {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 8px 10px;
+}
+
+.reviewList {
+  display: grid;
+  gap: 16px;
+}
+
+.reviewCard {
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+}
+
+.reviewHeader,
+.reviewGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: 16px;
+}
+
+.reviewHeader h2 {
+  margin: 5px 0;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.reviewGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.reviewCard h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.reviewFields {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.reviewFields dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.reviewFields dd {
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.plainList {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.emptyState {
+  padding: 14px;
+}
+
 @media (max-width: 760px) {
   .topbar {
     align-items: flex-start;
@@ -195,7 +303,9 @@ th {
   }
 
   .filters,
-  .metrics {
+  .metrics,
+  .reviewHeader,
+  .reviewGrid {
     grid-template-columns: 1fr;
   }
 

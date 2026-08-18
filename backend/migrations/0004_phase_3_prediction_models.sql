@@ -1,0 +1,2 @@
+-- Phase 3 adds portable SQLAlchemy-managed prediction tables.
+-- Local development uses Base.metadata.create_all; this migration file records the schema version.

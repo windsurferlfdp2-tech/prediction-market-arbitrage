@@ -2,8 +2,29 @@ import Link from "next/link";
 
 import { getOpportunity } from "../../../lib/api";
 
-export default async function OpportunityDetail({ params }: { params: { id: string } }) {
-  const opportunity = await getOpportunity(params.id);
+export default async function OpportunityDetail({
+  params
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const opportunity = await getOpportunity(id, "live").catch(() => null);
+
+  if (!opportunity) {
+    return (
+      <main className="shell">
+        <header className="topbar">
+          <div>
+            <h1 className="title">Opportunity unavailable</h1>
+            <p className="subtitle">Backend API is unavailable or this estimate no longer exists.</p>
+          </div>
+          <Link className="pill" href="/">
+            Back
+          </Link>
+        </header>
+      </main>
+    );
+  }
 
   return (
     <main className="shell">

@@ -19,6 +19,11 @@ services:
     build:
       context: ./backend
     env_file: .env.example
+    environment:
+      LOCAL_DEVELOPMENT: "false"
+      DATA_MODE: live
+      DATABASE_URL: postgresql+asyncpg://arb:arb@postgres:5432/arb
+      REDIS_URL: redis://redis:6379/0
     ports:
       - "8000:8000"
     depends_on:

@@ -1,16 +1,24 @@
 {
   "data": [
     {
-      "condition_id": "pm-condition-fed-july",
+      "conditionId": "pm-condition-fed-july",
       "question": "Will the Fed cut rates at the July meeting?",
       "active": true,
       "closed": false,
-      "enable_order_book": true,
-      "market_slug": "fed-july-rate-cut",
-      "tokens": [
-        {"token_id": "pm-fed-yes", "outcome": "Yes"},
-        {"token_id": "pm-fed-no", "outcome": "No"}
-      ]
+      "enableOrderBook": true,
+      "slug": "fed-july-rate-cut",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "clobTokenIds": "[\"pm-fed-yes\", \"pm-fed-no\"]"
+    },
+    {
+      "conditionId": "pm-condition-non-binary",
+      "question": "Which team will win?",
+      "active": true,
+      "closed": false,
+      "enableOrderBook": true,
+      "slug": "which-team-will-win",
+      "outcomes": "[\"Team A\", \"Team B\"]",
+      "clobTokenIds": "[\"pm-team-a\", \"pm-team-b\"]"
     }
   ]
 }
